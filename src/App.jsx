@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage';
 import InfoPage from './pages/InfoPage';
 import PredictionPage from './pages/PredictionPage';
 import ChatPage from './pages/ChatPage';
+import ContactPage from './pages/ContactPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const CLERK_PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_KEY;
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/InfoPage" element={<InfoPage />} />
           <Route path="/AboutPage" element={<AboutPage />} />
+          <Route path="/ContactPage" element={<ContactPage />} />
           <Route
             path="/HomePage"
             element={
