@@ -1,30 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { UserButton, useUser } from '@clerk/clerk-react';
-
-const ChatMessage = ({ message }) => {
-  const isUser = message.role === 'user';
-  return (
-    <div className={`flex items-start gap-3 px-4 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
-          <div className="flex-shrink-0">
-            <img 
-              src={isUser ? "/src/public/poe-icon.jpg" : "/src/public/Chatbot Logo.png"} 
-              alt={isUser ? "User" : "Bot"} 
-              className="w-14 h-14 rounded-full"
-            />
-          </div>
-    
-        <div 
-          className={`max-w-[70%] p-3 rounded-2xl ${
-            isUser 
-              ? 'bg-primary text-black rounded-tr-none' 
-              : 'bg-deepPurple text-lightBg rounded-tl-none'
-          }`}
-        >
-          {message.content}
-        </div>
-    </div>
-  );
-};
+import { useUser } from '@clerk/clerk-react';
+import Header from '../components/Header';
+import ChatMessage from '../feature-components/ChatMessage';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([]);
@@ -103,40 +80,24 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-secondary from-primary/5 via-deepPurple/5 to-secondary/5">
-      {/* Navbar */}
-      <header className="bg-white shadow-sm">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16 items-center">
-                <div className="flex items-center">
-                <img src="/src/public/Text Logo.png" alt="MindEase Logo" className="h-14" />
-                </div>
-                <div className="flex items-center gap-4">
-                <button 
-                    onClick={() => window.location.href = '/'}
-                    className="px-6 py-2 rounded-lg bg-pink-200 hover:bg-pink-300 transition-colors text-black font-medium"
-                >
-                    Home
-                </button>
-                <UserButton afterSignOutUrl="/" />
-                </div>
-            </div>
-            </div>
-        </header>
+    <div className="h-screen flex flex-col bg-deepPurple/70 from-primary/5 via-deepPurple/5 to-secondary/5">
+      <Header />
 
       {/* Main Chat Container */}
       <div className="flex-1 container mx-auto px-4 py-6 relative">
         {/* Chat Box */}
-        <div className="bg-white/80 backdrop-blur-sm shadow-xl rounded-3xl h-[calc(100vh-8rem)] overflow-hidden relative border border-gray-200">
+        <div className="bg-primary backdrop-blur-sm shadow-xl rounded-3xl h-[calc(100vh-8rem)] overflow-hidden relative border border-gray-200">
           {/* Messages Area */}
           <div className="h-full overflow-y-auto pb-24 pt-6 space-y-6 scrollbar-thin scrollbar-thumb-primary scrollbar-track-transparent">
             {messages.length === 0 ? (
-              <div className="text-center text-gray-500 mt-8">
-                <div className="bg-deepPurple/50 backdrop-blur-md rounded-2xl p-8 shadow-xl max-w-lg mx-auto m-4">
-                  <h2 className="text-2xl font-bold text-secondary mb-4">👋 Hi there! I am MINDY - The chatbot from mindEase</h2>
-                  <p className="text-lightBg">How are you feeling today? I'm here to listen and help.</p>
-                </div>
+              <div className="text-center text-gray-500 mt-8 mx-4">
+              <div className="bg-deepPurple/50 backdrop-blur-md rounded-2xl p-8 shadow-xl max-w-lg mx-auto m-4">
+                <h2 className="text-2xl font-bold text-black mb-4">👋 Hi there! I am MINDY - The chatbot from mindEase</h2>
+                <p className="text-lightBg">How are you feeling today? I'm here to listen and help.</p>
+                <br />
+                <p className="text-xs text-black/60">Responses may be inaccurate or not reflect mindEase's views.</p>
               </div>
+            </div>
             ) : (
               messages.map((message, index) => (
                 <ChatMessage key={index} message={message} />
@@ -147,27 +108,36 @@ export default function ChatPage() {
 
           {/* Floating Input Box */}
           <div className="absolute bottom-6 left-6 right-6">
-            <form 
-              onSubmit={handleSubmit} 
-              className="flex gap-4 bg-white p-4 rounded-2xl shadow-lg border border-gray-100"
+          <form 
+            onSubmit={handleSubmit} 
+            className="relative flex flex-col sm:flex-row bg-white p-3 rounded-2xl shadow-lg border border-gray-100"
+          >
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="What's on your mind today?"
+              className="w-full px-4 py-2 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 pr-12"
+              disabled={isLoading}
+            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full transition-colors duration-200 disabled:opacity-50"
             >
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="What's on your mind today?"
-                className="flex-1 px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                disabled={isLoading}
-              />
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="bg-primary hover:bg-deepPurple text-deepPurple px-6 py-3 rounded-xl transition-colors duration-200 disabled:opacity-50 font-medium shadow-lg hover:shadow-xl whitespace-nowrap"
-              >
-                {isLoading ? 'Sending...' : 'Send'}
-              </button>
-            </form>
-          </div>
+              {isLoading ? (
+                <div className="w-5 h-5 rounded-full border-2 border-deepPurple border-t-transparent animate-spin"></div>
+              ) : (
+                <img 
+                  width="24" 
+                  height="24" 
+                  src="https://img.icons8.com/fluency-systems-filled/96/sent.png" 
+                  alt="sent"
+                />
+              )}
+            </button>
+          </form>
+        </div>
         </div>
       </div>
     </div>

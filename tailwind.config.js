@@ -12,9 +12,11 @@ export default {
         accent: '#EFB8DA',
         deepPurple: '#6840D9',
         lightBg: '#FEFEFE',
+        resultRed: '#ff4d4d',
+        resultGreen: '#4dffa6',
       },
       fontFamily: {
-        grotesk: ["Space Grotesk", "sans-serif"],
+        grotesk: ["Geologica", "sans-serif"],
       },
     },
   },

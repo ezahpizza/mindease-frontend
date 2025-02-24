@@ -1,0 +1,12 @@
+.FormCard {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.FormCard.exit {
+    opacity: 0;
+}
+
+.FormCard.enter {
+    opacity: 1;
+}

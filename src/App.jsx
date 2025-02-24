@@ -8,6 +8,7 @@ import PredictionPage from './pages/PredictionPage';
 import ChatPage from './pages/ChatPage';
 import ContactPage from './pages/ContactPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import ResourcePage from './pages/ResourcePage';
 
 const CLERK_PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_KEY;
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/InfoPage" element={<InfoPage />} />
           <Route path="/AboutPage" element={<AboutPage />} />
           <Route path="/ContactPage" element={<ContactPage />} />
+          <Route path="/ResourcePage" element={<ResourcePage />} />
           <Route
             path="/HomePage"
             element={

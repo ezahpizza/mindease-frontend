@@ -1,30 +1,13 @@
 import React from 'react';
-import { UserButton } from '@clerk/clerk-react';
+import Header from '../components/Header';
 
 const InfoPage = () => {
     return (
-        <div className="min-h-screen bg-deepPurple/20">
-            <header className="bg-white shadow-sm">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between h-16 items-center">
-                        <div className="flex items-center">
-                            <img src="/src/public/Text Logo.png" alt="MindEase Logo" className="h-14" />
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <button 
-                                onClick={() => window.location.href = '/'}
-                                className="px-6 py-2 rounded-lg bg-pink-200 hover:bg-pink-300 transition-colors text-black font-medium"
-                            >
-                                Home
-                            </button>
-                            <UserButton afterSignOutUrl="/" />
-                        </div>
-                    </div>
-                </div>
-            </header>
+        <div className="min-h-screen bg-deepPurple/70">
+            <Header />
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="bg-primary/80 rounded-3xl p-8 shadow-lg">
+                <div className="bg-primary rounded-3xl p-8 shadow-lg">
                     <h1 className="text-3xl font-bold text-gray-900 mb-6">Mental Health: It's Real, It's Tough, and You're Not Alone</h1>
                     
                     <div className="space-y-6 text-gray-700">
