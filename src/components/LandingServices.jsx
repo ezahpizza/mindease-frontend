@@ -18,7 +18,7 @@ function LandingServices() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="p-8 bg-purple-200 rounded-3xl transition-all duration-300 hover:bg-purple-300 hover:shadow-lg hover:scale-105 hover:ring-4 hover:ring-purple-400 hover:ring-opacity-50">
-                    <img src="public\Chatbot Logo.png" alt="chatbot Logo" className="h-14 mb-4" />
+                    <img src="\Chatbot Logo.png" alt="chatbot Logo" className="h-14 mb-4" />
                     <h3 className="text-2xl font-semibold mb-4">
                         <span className="px-4 py-2 text-deepPurple">An Insight Into Your Well-Being</span>
                     </h3>
@@ -28,7 +28,7 @@ function LandingServices() {
                 </div>
 
                 <div className="p-8 bg-pink-200 rounded-3xl transition-all duration-300 hover:bg-pink-300 hover:shadow-lg hover:scale-105 hover:ring-4 hover:ring-pink-400 hover:ring-opacity-50">
-                    <img src="public\Chatbot Logo.png" alt="chatbot Logo" className="h-14 mb-4" />
+                    <img src="\Chatbot Logo.png" alt="chatbot Logo" className="h-14 mb-4" />
                     <h3 className="text-2xl font-semibold mb-4">
                         <span className="px-4 py-2 text-deepPurple">MINDY, Your AI Mental Health Buddy</span>
                     </h3>
