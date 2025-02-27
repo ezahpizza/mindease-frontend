@@ -35,7 +35,7 @@ return (
                     <div className="flex-shrink-0 md:w-1/3 lg:w-1/4 xl:w-1/5">
                             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-deepPurple shadow-lg">
                                 <img 
-                                src="\src\public\Prateek-Mohapatra.jpg" 
+                                src="public\Prateek-Mohapatra.jpg" 
                                 alt="Prateek Mohapatra"
                                 className="w-full h-full object-cover"/>
                             </div>
@@ -69,7 +69,7 @@ return (
                         <div className="flex-shrink-0 md:w-1/3 lg:w-1/4 xl:w-1/5">
                             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-deepPurple shadow-lg">
                                 <img 
-                                src="\src\public\Jyotiraditya-Swain.jpg"
+                                src="public\Jyotiraditya-Swain.jpg"
                                 alt="Jyotiraditya Swain"
                                 className="w-full h-full object-cover"/>
                             </div>
@@ -98,7 +98,7 @@ return (
                     <div className="flex-shrink-0 md:w-1/3 lg:w-1/4 xl:w-1/5">
                             <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-deepPurple shadow-lg">
                                 <img 
-                                src="\src\public\Amlan-Sahu.jpg" 
+                                src="public\Amlan-Sahu.jpg" 
                                 alt="Amlan Sahu"
                                 className="w-full h-full object-cover"/>
                             </div>

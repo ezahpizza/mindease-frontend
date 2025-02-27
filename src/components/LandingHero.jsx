@@ -19,7 +19,7 @@ function LandingHero() {
                 </SignUpButton>
             </div>
             <div className="order-1 md:order-2 flex justify-center items-center">
-                <img src="\src\public\header-image.png" alt="Illustration" className="w-full md:w-4/5" />
+                <img src="\header-image.png" alt="Illustration" className="w-full md:w-4/5" />
             </div>
         </section>
     );

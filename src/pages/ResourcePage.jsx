@@ -12,7 +12,7 @@ const ResourcePage = () => {
                     {/* Background image with lower z-index */}
                     <div className="absolute inset-0 z-0">
                         <img 
-                            src="\src\public\mindease-logo.png" 
+                            src="\mindease-logo.png" 
                             alt="Background" 
                             className="w-full h-full object-cover opacity-30"
                         />

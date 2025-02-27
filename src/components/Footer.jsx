@@ -9,7 +9,7 @@ function Footer() {
                 <div className="container mx-auto max-w-7xl px-1">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div className="flex items-center gap-2 mb-6">
-                            <img src="src/public/Text Logo.png" alt="mindEase Logo" className="h-24" />
+                            <img src="/Text Logo.png" alt="mindEase Logo" className="h-24" />
                         </div>
                         <div className="space-y-2">
                             <p className="border-b text-2xl text-liightBg mb-6">Team</p>

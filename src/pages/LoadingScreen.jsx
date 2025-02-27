@@ -26,7 +26,7 @@ return (
     ${isMinimizing ? 'opacity-0' : 'opacity-100'}`}
 >
     <img
-    src="\src\public\mindease-logo.png"
+    src="\mindease-logo.png"
     alt="mindEase Logo"
     className={`transition-transform duration-1000 
     ${isMinimizing ? 'scale-50' : 'scale-200'}`}

@@ -20,7 +20,7 @@ function LandingNav() {
             <nav className="mx-auto max-w-5xl bg-white rounded-full shadow-lg py-4 px-6">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                        <img src="\src\public\mindease-logo.png" alt="mindEase Logo" className="h-8" />
+                        <img src="public\mindease-logo.png" alt="mindEase Logo" className="h-8" />
                         <span className="text-xl font-semibold">mindEase</span>
                     </div>
                     <div className="flex items-center gap-4">

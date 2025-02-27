@@ -18,7 +18,7 @@ function HomeHero() {
                 </p>
             </div>
             <div className="order-1 md:order-2 flex justify-center items-center">
-                <img src="\src\public\Freedom.png" alt="Illustration" className="w-full md:w-5/5" />
+                <img src="\Freedom.png" alt="Illustration" className="w-full md:w-5/5" />
             </div>
         </section>
     );

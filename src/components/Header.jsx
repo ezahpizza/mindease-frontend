@@ -10,7 +10,7 @@ function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     <div className="flex items-center">
-                    <img src="/src/public/Text Logo.png" alt="MindEase Logo" className="h-14" />
+                    <img src="/Text Logo.png" alt="MindEase Logo" className="h-14" />
                     </div>
                     <div className="flex items-center gap-4">
                     <button 
