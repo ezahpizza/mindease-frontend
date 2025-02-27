@@ -4,7 +4,7 @@ const ChatMessage = ({ message }) => {
     <div className={`flex items-start gap-3 px-4 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
           <div className="flex-shrink-0">
             <img 
-              src={isUser ? "/src/public/poe-icon.jpg" : "/src/public/Chatbot Logo.png"} 
+              src={isUser ? "/poe-icon.jpg" : "/Chatbot Logo.png"} 
               alt={isUser ? "User" : "Bot"} 
               className="w-14 h-14 rounded-full"
             />
