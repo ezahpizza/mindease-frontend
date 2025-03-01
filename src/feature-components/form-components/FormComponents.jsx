@@ -18,7 +18,6 @@ export const Select = ({ name, value, options, label, onChange }) => (
         </select>
     </div>
 );
-
 export const NumberInput = ({ name, value, label, placeholder, onChange }) => (
     <div className="space-y-2">
         <label className="block text-sm font-medium text-black">{label}</label>
